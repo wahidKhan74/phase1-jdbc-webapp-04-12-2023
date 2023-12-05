@@ -19,7 +19,7 @@ public class DatabaseConnection {
 
 	Connection connection = null;
 	Statement statment = null;
-	ResultSet rst = null;
+	ResultSet rst ;
 
 	/**
 	 * This method initialize connection.
@@ -67,18 +67,11 @@ public class DatabaseConnection {
 			System.out.println("3. Statement is created.");
 			
 			rst = statment.executeQuery(query);
-		} catch (SQLException e) {
-			System.out.println("Exception Occured ::: " + e.getClass());
-			// e.printStackTrace();
-		} finally {
-			// clean up
-			try {
-				rst.close();
-				statment.close();
-			} catch (SQLException e) {
-				System.out.println("Exception Occured ::: " + e.getClass());
-			}
+			System.out.println("4. Execute Query.");
 			
+		} catch (SQLException e) {
+				System.out.println("Exception Occured ::: " + e.getClass());
+				// e.printStackTrace();
 		}
 		return rst;
 	}
@@ -98,11 +91,10 @@ public class DatabaseConnection {
 			rowsAffected = statment.executeUpdate(query);
 		} catch (SQLException e) {
 			System.out.println("Exception Occured ::: " + e.getClass());
-			// e.printStackTrace();
+			e.printStackTrace();
 		} finally {
 			// clean up
 			try {
-				rst.close();
 				statment.close();
 			} catch (SQLException e) {
 				System.out.println("Exception Occured ::: " + e.getClass());

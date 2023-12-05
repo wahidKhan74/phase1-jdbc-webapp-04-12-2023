@@ -8,12 +8,12 @@
 </head>
 <body>
 	<div style="text-align:center;border:2px solid green; padding:20px;">
-	<h1 >JDBC CRUD Operations</h1>
-	<a href="init-connection" > Initialize Connection </a> | 
-	<a href="list-product" > List Product </a> | 
-	<a href="create-product" > Create Product</a> | 
-	<a href="update-product" > Update Product </a> | 
-	<a href="delete-product" > Delete Product </a> | 
+		<h1 >JDBC CRUD Operations</h1>
+		<a href="init-connection" > Initialize Connection </a> | 
+		<a href="list-product" > List Product </a> | 
+		<a href="add-product" > Add Product</a> | 
+		<a href="update-product" > Update Product </a> | 
+		<a href="delete-product" > Delete Product </a> | 
 	</div>
 </body>
 </html>
